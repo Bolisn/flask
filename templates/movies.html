@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currently Playing Movies</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Currently Playing Movies</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('movies')}}">Movies</a></li>
+                    <li><a href="{{url_for('req')}}">Request a Movie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="movies-list">
+            <h2>Movies Currently Playing</h2>
+            <ul>
+                <li>Movie 1 - Description</li>
+                <li>Movie 2 - Description</li>
+                <li>Movie 3 - Description</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Imaginary Cinema Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
