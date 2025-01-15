@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imaginary Cinema Store</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Imaginary Cinema Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('movies')}}">Movies</a></li>
+                    <li><a href="{{url_for('req')}}">Request a Movie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to Imaginary Cinema Store!</h2>
+            <p>Your one-stop destination for the best cinematic experiences.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Imaginary Cinema Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
