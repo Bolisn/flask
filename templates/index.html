@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imaginary Cinema Store</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -20,6 +22,14 @@
         </div>
     </header>
 
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+   
     <main>
         <section class="hero">
             <h2>Welcome to Imaginary Cinema Store!</h2>
@@ -31,4 +41,5 @@
         <p>&copy; 2025 Imaginary Cinema Store. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

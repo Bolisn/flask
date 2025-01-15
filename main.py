@@ -11,9 +11,16 @@ def home():
 def movies():
     return render_template("movies.html")
 
-@app.route("/request/")
+@app.route("/request/", methods=["POST", "GET"])
 def req():
-    return render_template("request.html")
+    if request.method == "POST":
+        title = request.form["movie-name"]
+        email = request.form["email"]
+        comments = request.form["comments"]
+        flash("Thank you for your recommendation!", "info")
+        return redirect(url_for('home'))
+    else:
+        return render_template("request.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
